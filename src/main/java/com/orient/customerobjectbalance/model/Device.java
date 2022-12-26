@@ -1,8 +1,10 @@
 package com.orient.customerobjectbalance.model;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import jakarta.persistence.*;
 
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
