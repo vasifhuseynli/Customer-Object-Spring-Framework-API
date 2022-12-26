@@ -9,12 +9,8 @@ import java.util.List;
 public interface CustomerObjectService {
 
     List<CustomerObject> findAll();
-
     CustomerObject findById(Long id);
-
     void create(CustomerObject CustomerObject);
-
     void update(Long id, CustomerObject CustomerObject);
-
     void delete(Long id);
 }

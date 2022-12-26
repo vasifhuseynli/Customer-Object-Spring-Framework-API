@@ -9,12 +9,8 @@ import java.util.List;
 public interface DeviceService {
 
     List<Device> findAll();
-
     Device findById(Long id);
-
     void create(Device device);
-
     void update(Long id, Device device);
-
     void delete(Long id);
 }

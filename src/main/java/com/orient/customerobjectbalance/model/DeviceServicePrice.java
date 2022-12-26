@@ -1,12 +1,13 @@
 package com.orient.customerobjectbalance.model;
 
+
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity(name = "device_service_price")
+@Entity(name = "device_service")
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class DeviceServicePrice {
 

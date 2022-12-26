@@ -9,12 +9,9 @@ import java.util.List;
 public interface DeviceServicePriceService {
 
     List<DeviceServicePrice> findAll();
-
     DeviceServicePrice findById(Long id);
-
     void create(DeviceServicePrice deviceServicePrice);
-
     void update(Long id, DeviceServicePrice deviceServicePrice);
-
     void delete(Long id);
+
 }
