@@ -1,27 +1,27 @@
 package com.orient.customerobjectbalance.service.impl;
 
 import com.orient.customerobjectbalance.model.Customer;
-import com.orient.customerobjectbalance.repository.CustomerRepository;
-import com.orient.customerobjectbalance.service.CustomerService;
+import com.orient.customerobjectbalance.repository.ICustomerRepository;
+import com.orient.customerobjectbalance.service.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerServiceImpl implements ICustomerService {
 
     @Autowired
-    CustomerRepository customerRepository;
+    ICustomerRepository ICustomerRepository;
 
     @Override
     public List<Customer> findAll() {
-        return customerRepository.findAll();
+        return ICustomerRepository.findAll();
     }
 
     @Override
     public Customer findById(Long id) {
-        return customerRepository.findById(id).get();
+        return ICustomerRepository.findById(id).get();
     }
 
     @Override
@@ -33,7 +33,7 @@ public class CustomerServiceImpl implements CustomerService {
         newCustomer.setAdress(customer.getAdress());
         newCustomer.setPhone(customer.getPhone());
         newCustomer.setBalance(customer.getBalance());
-        customerRepository.save(newCustomer);
+        ICustomerRepository.save(newCustomer);
 
     }
 
@@ -46,7 +46,7 @@ public class CustomerServiceImpl implements CustomerService {
         oldCustomer.setAdress(customer.getAdress());
         oldCustomer.setPhone(customer.getPhone());
         oldCustomer.setBalance(customer.getBalance());
-        customerRepository.save(oldCustomer);
+        ICustomerRepository.save(oldCustomer);
 
 
     }
@@ -55,7 +55,7 @@ public class CustomerServiceImpl implements CustomerService {
     public void delete(Long id) {
         Customer customer = findById(id);
         if (customer != null) {
-            customerRepository.delete(customer);
+            ICustomerRepository.delete(customer);
         }
 
     }

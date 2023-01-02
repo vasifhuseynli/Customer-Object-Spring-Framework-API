@@ -1,7 +1,7 @@
 package com.orient.customerobjectbalance.controller;
 
 import com.orient.customerobjectbalance.model.Device;
-import com.orient.customerobjectbalance.service.DeviceService;
+import com.orient.customerobjectbalance.service.IDeviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,7 @@ import java.util.List;
 public class DeviceController {
 
     @Autowired
-    DeviceService deviceService;
+    IDeviceService deviceService;
 
     @GetMapping(value = "/all")
     public List<Device> findAll() {

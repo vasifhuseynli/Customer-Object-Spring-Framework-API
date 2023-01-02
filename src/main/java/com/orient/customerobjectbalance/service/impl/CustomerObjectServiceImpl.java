@@ -1,29 +1,29 @@
 package com.orient.customerobjectbalance.service.impl;
 
 import com.orient.customerobjectbalance.model.CustomerObject;
-import com.orient.customerobjectbalance.repository.CustomerObjectRepository;
-import com.orient.customerobjectbalance.service.CustomerObjectService;
+import com.orient.customerobjectbalance.repository.ICustomerObjectRepository;
+import com.orient.customerobjectbalance.service.ICustomerObjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CustomerObjectServiceImpl implements CustomerObjectService {
+public class CustomerObjectServiceImpl implements ICustomerObjectService {
 
     @Autowired
-    CustomerObjectRepository customerObjectRepository;
+    ICustomerObjectRepository ICustomerObjectRepository;
 
 
     @Override
     public List<CustomerObject> findAll() {
-        List<CustomerObject> customerObjects = customerObjectRepository.findAll();
+        List<CustomerObject> customerObjects = ICustomerObjectRepository.findAll();
         return customerObjects;
     }
 
     @Override
     public CustomerObject findById(Long id) {
-        return customerObjectRepository.findById(id).get();
+        return ICustomerObjectRepository.findById(id).get();
     }
 
     @Override
@@ -32,7 +32,7 @@ public class CustomerObjectServiceImpl implements CustomerObjectService {
         object.setCustomer_object_code(customerObject.getCustomer_object_code());
         object.setCustomer_object_adress(customerObject.getCustomer_object_adress());
         object.setCustomer_id(customerObject.getCustomer_id());
-        customerObjectRepository.save(object);
+        ICustomerObjectRepository.save(object);
 
     }
 
@@ -42,7 +42,7 @@ public class CustomerObjectServiceImpl implements CustomerObjectService {
         oldObject.setCustomer_object_code(customerObject.getCustomer_object_code());
         oldObject.setCustomer_object_adress(customerObject.getCustomer_object_adress());
         oldObject.setCustomer_id(customerObject.getCustomer_id());
-        customerObjectRepository.save(oldObject);
+        ICustomerObjectRepository.save(oldObject);
 
 
     }
@@ -51,7 +51,7 @@ public class CustomerObjectServiceImpl implements CustomerObjectService {
     public void delete(Long id) {
         CustomerObject customerObject=findById(id);
         if(customerObject!=null){
-            customerObjectRepository.delete(customerObject);
+            ICustomerObjectRepository.delete(customerObject);
         }
 
     }

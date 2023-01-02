@@ -1,18 +1,18 @@
 package com.orient.customerobjectbalance.service.impl;
 
 import com.orient.customerobjectbalance.model.DeviceServicePrice;
-import com.orient.customerobjectbalance.repository.DeviceServicePriceRepository;
-import com.orient.customerobjectbalance.service.DeviceServicePriceService;
+import com.orient.customerobjectbalance.repository.IDeviceServicePriceRepository;
+import com.orient.customerobjectbalance.service.IDeviceServicePriceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class DeviceServicePriceServiceImpl implements DeviceServicePriceService {
+public class DeviceServicePriceServiceImpl implements IDeviceServicePriceService {
 
     @Autowired
-    DeviceServicePriceRepository deviceServicePriceRepository;
+    IDeviceServicePriceRepository deviceServicePriceRepository;
 
     @Override
     public List<DeviceServicePrice> findAll() {

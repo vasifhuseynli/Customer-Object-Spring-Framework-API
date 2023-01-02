@@ -2,12 +2,11 @@ package com.orient.customerobjectbalance.service;
 
 import com.orient.customerobjectbalance.model.Customer;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
 import java.util.List;
 
 @Service
-public interface CustomerService {
+public interface ICustomerService {
 
     List<Customer> findAll();
     Customer findById(Long id);

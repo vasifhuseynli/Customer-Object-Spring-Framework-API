@@ -20,7 +20,7 @@ public class DeviceServicePrice {
 
     @Override
     public String toString() {
-        return "DeviceServicePriceRepository{" +
+        return "IDeviceServicePriceRepository{" +
                 "id=" + id +
                 ", period='" + period + '\'' +
                 ", price='" + price + '\'' +

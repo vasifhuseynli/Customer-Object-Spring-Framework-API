@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface DeviceService {
+public interface IDeviceService {
 
     List<Device> findAll();
     Device findById(Long id);

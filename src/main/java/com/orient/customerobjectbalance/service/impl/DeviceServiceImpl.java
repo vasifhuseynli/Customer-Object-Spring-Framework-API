@@ -1,18 +1,18 @@
 package com.orient.customerobjectbalance.service.impl;
 
 import com.orient.customerobjectbalance.model.Device;
-import com.orient.customerobjectbalance.repository.DeviceRepository;
-import com.orient.customerobjectbalance.service.DeviceService;
+import com.orient.customerobjectbalance.repository.IDeviceRepository;
+import com.orient.customerobjectbalance.service.IDeviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class DeviceServiceImpl implements DeviceService {
+public class DeviceServiceImpl implements IDeviceService {
 
     @Autowired
-    DeviceRepository deviceRepository;
+    IDeviceRepository deviceRepository;
 
     @Override
     public List<Device> findAll() {

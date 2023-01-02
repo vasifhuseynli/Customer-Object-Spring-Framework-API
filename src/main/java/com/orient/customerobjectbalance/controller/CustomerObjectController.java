@@ -1,7 +1,7 @@
 package com.orient.customerobjectbalance.controller;
 
 import com.orient.customerobjectbalance.model.CustomerObject;
-import com.orient.customerobjectbalance.service.CustomerObjectService;
+import com.orient.customerobjectbalance.service.ICustomerObjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,7 @@ import java.util.List;
 public class CustomerObjectController {
 
     @Autowired
-    CustomerObjectService customerObjectService;
+    ICustomerObjectService customerObjectService;
 
     @GetMapping(value = "/all")
     public List<CustomerObject> findAll() {
