@@ -1,4 +1,4 @@
-# CustomerObject
+# Customer Object Spring Framework project
 General information about the sales company's customers
 1. Creating, changing, searching, deleting a new client.
 2. Creating, changing, searching, deleting objects belonging to the client
